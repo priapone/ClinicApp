@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocationVC" customModule="test2" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocationVC" customModule="DoctorPlus" customModuleProvider="target">
             <connections>
-                <outlet property="CollView" destination="XVp-BK-XVa" id="Wrh-5g-hwt"/>
-                <outlet property="collectionView" destination="Uc5-AY-78o" id="ssq-4z-Qpy"/>
+                <outlet property="CollView" destination="Ohh-Oc-wHQ" id="KhO-Y2-9Og"/>
+                <outlet property="collectionView" destination="isf-FI-9T5" id="FhF-JU-feJ"/>
                 <outlet property="mapView" destination="Uwo-1W-85N" id="Z9Q-9d-JAz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,16 +22,19 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Uwo-1W-85N">
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Uwo-1W-85N">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </mapView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XVp-BK-XVa">
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ohh-Oc-wHQ">
                     <rect key="frame" x="20" y="642" width="374" height="170"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Uc5-AY-78o">
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="isf-FI-9T5">
                             <rect key="frame" x="0.0" y="0.0" width="374" height="170"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Z0V-SK-oux">
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wIi-1J-SSP">
                                 <size key="itemSize" width="128" height="128"/>
                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -39,16 +43,9 @@
                         </collectionView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstItem="Uc5-AY-78o" firstAttribute="leading" secondItem="XVp-BK-XVa" secondAttribute="leading" id="6XL-Gb-eeB"/>
-                        <constraint firstAttribute="trailing" secondItem="Uc5-AY-78o" secondAttribute="trailing" id="KVq-bc-Tat"/>
-                        <constraint firstAttribute="height" constant="170" id="WQQ-jv-DLq"/>
-                        <constraint firstAttribute="bottom" secondItem="Uc5-AY-78o" secondAttribute="bottom" id="X20-Ah-yMy"/>
-                        <constraint firstItem="Uc5-AY-78o" firstAttribute="top" secondItem="XVp-BK-XVa" secondAttribute="top" id="gcH-1y-9yG"/>
-                    </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLK-um-qiS">
-                    <rect key="frame" x="20" y="49" width="40" height="40"/>
+                    <rect key="frame" x="20" y="53" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="f2i-QY-79p"/>
                         <constraint firstAttribute="width" constant="40" id="rDj-pk-rmi"/>
@@ -63,15 +60,8 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XVp-BK-XVa" secondAttribute="trailing" constant="20" id="2VW-fb-1eW"/>
                 <constraint firstItem="rLK-um-qiS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="8E9-6D-NHe"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="XVp-BK-XVa" secondAttribute="bottom" constant="50" id="CqE-Zr-NWT"/>
                 <constraint firstItem="rLK-um-qiS" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="GVS-wG-ihN"/>
-                <constraint firstItem="XVp-BK-XVa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="IB7-yu-Tvd"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Uwo-1W-85N" secondAttribute="trailing" id="f3G-Sw-ZH2"/>
-                <constraint firstItem="Uwo-1W-85N" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gj3-3K-fMb"/>
-                <constraint firstItem="Uwo-1W-85N" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nhN-fS-Dse"/>
-                <constraint firstAttribute="bottom" secondItem="Uwo-1W-85N" secondAttribute="bottom" id="ya0-op-HcB"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="95.758928571428569"/>
         </view>

@@ -19,6 +19,7 @@ class AppointmentVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         }
     }
     var isappointmentVC : Bool = true
+    var doctor: DoctorDetail = DoctorDetail()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,7 @@ class AppointmentVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         navigationView.onTapBackAction = {
             self.navigationController?.popViewController(animated: true)
         }
-        navigationView.TitleLebal.text = "Appointment"
+        navigationView.TitleLebal.text = "Appuntamento"
        
         tableView.delegate = self
         tableView.dataSource = self
@@ -34,6 +35,7 @@ class AppointmentVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
 
     @IBAction func confirmBtnAction(_ sender: UIButton) {
         let vc = PastientDetailsVC()
+        vc.doctor = self.doctor
         vc.isappointmentVC = self.isappointmentVC
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -61,6 +63,9 @@ class AppointmentVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         }
         else{
             let timeCell = tableView.dequeueReusableCell(withIdentifier: "TimePickerCell", for: indexPath) as! TimePickerCell
+            timeCell.morningSlot = doctor.morningSlot
+            timeCell.afternoonSlot = doctor.afternoonSlot
+            timeCell.eveningSlot = doctor.eveningSlot
             return timeCell
         }
         

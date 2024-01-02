@@ -99,15 +99,15 @@ class TimePickerCell: UITableViewCell, UICollectionViewDelegate, UICollectionVie
         let headerView = self.collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "CollectionViewHeader", for: indexPath) as! CollectionViewHeader
         
         if indexPath.section == 0{
-            headerView.lblTitle.text = "Morning Sloat"
+            headerView.lblTitle.text = "Programma della mattina"
             return headerView
         }
         else if indexPath.section == 1{
-            headerView.lblTitle.text = "Afternoon Sloat"
+            headerView.lblTitle.text = "Programma del pomeriggio"
             return headerView
         }
         else{
-            headerView.lblTitle.text = "Evening Sloat"
+            headerView.lblTitle.text = "Programma della sera"
             return headerView
         }
     }

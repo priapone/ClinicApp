@@ -46,9 +46,9 @@ class DoctorVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     func DoctorCategory(){
         
         Doctor = [
-            DoctorDetail(image: UIImage(named: "100")!, name: "Dr.Robot Smith", specilist: "Dentist"),
-            DoctorDetail(image: UIImage(named: "200")!, name: "Dr.Robot Smith", specilist: "Dentist"),
-            DoctorDetail(image: UIImage(named: "300")!, name: "Dr.robort Smith", specilist: "Dentist")
+            DoctorDetail(image: UIImage(named: "100")!, name: "Mauro", surname: "De Bellis", specialist: "Neurologo", cv: "Prova di CV di Mauro De Bellis", morningSlot: ["10.10","10.30","10.50","11.20","11.50"], afternoonSlot: ["14.00","14.30","15.00"], eveningSlot: ["19.00","19.30","20.00","20.30"]),
+            DoctorDetail(image: UIImage(named: "200")!, name: "Antonio", surname: "Berizzi", specialist: "Ortopedico", cv: "Prova di CV di Antonio Berizzi"),
+            DoctorDetail(image: UIImage(named: "300")!, name: "Ezio", surname: "Zanon", specialist: "Ematologo", cv: "Prova di CV di Ezio Zanon")
         ]
     }
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -79,14 +79,14 @@ class DoctorVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             
             if indexPath.row % 2 == 0{
                 doctorCell.imageDoctor.image  =  itemOfImage.image
-                doctorCell.lblNameDoctor.text = "\(itemOfImage.name)"
-                doctorCell.lblSpecialist.text = "\(itemOfImage.specilist)"
+                doctorCell.lblNameDoctor.text = "\(itemOfImage.name) \(itemOfImage.surname)"
+                doctorCell.lblSpecialist.text = "\(itemOfImage.specialist)"
                 return doctorCell
             }
             else{
-                rightcell.lblDoctorName.text = "\(itemOfImage.name)"
+                rightcell.lblDoctorName.text = "\(itemOfImage.name) \(itemOfImage.surname)"
                 rightcell.imageOfDoctor.image = itemOfImage.image
-                rightcell.lblSpecilist.text = "\(itemOfImage.specilist)"
+                rightcell.lblSpecilist.text = "\(itemOfImage.specialist)"
                 return rightcell
             }
         }
@@ -101,15 +101,15 @@ class DoctorVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             headerView.lblTitle.text = "Popular Doctor"
         }
         else{
-            headerView.lblTitle.text = "Category"
+            headerView.lblTitle.text = "Categoria"
         }
         headerView.OntapSeeall = {
             if section == 0 {
                 let vc = DoctorCategoryVC()
                 self.navigationController?.pushViewController(vc, animated: true)
             }else {
-                let vc = DentistVC()
-                self.navigationController?.pushViewController(vc, animated: true)
+//                let vc = DentistVC()
+//                self.navigationController?.pushViewController(vc, animated: true)
             }
         }
         return headerView
@@ -125,7 +125,8 @@ class DoctorVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = DentistInformationVC()
+        let doctor = Doctor[indexPath.row]
+        let vc = DentistInformationVC(doctor: doctor)
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

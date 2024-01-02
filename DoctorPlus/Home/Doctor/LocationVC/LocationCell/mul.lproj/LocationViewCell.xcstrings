@@ -1,0 +1,78 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "aKk-kh-E9w.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Ambulatorio Spinea\"; ObjectID = \"aKk-kh-E9w\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Ambulatorio Spinea"
+          }
+        }
+      }
+    },
+    "Eal-x6-QTq.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"2.5 km from your location\"; ObjectID = \"Eal-x6-QTq\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "2.5 km from your location"
+          }
+        }
+      }
+    },
+    "ilA-oX-STN.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Via Pozzuoli 17/d \\n30038 Spinea\\nVenezia\"; ObjectID = \"ilA-oX-STN\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Via Pozzuoli 17/d \n30038 Spinea\nVenezia"
+          }
+        }
+      }
+    },
+    "kTg-7K-gpA.configuration.title" : {
+      "comment" : "Class = \"UIButton\"; configuration.title = \"Apri in Maps\"; ObjectID = \"kTg-7K-gpA\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Apri in Maps"
+          }
+        }
+      }
+    },
+    "kTg-7K-gpA.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Button\"; ObjectID = \"kTg-7K-gpA\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Button"
+          }
+        }
+      }
+    },
+    "Wyh-29-eJM.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Aperto dalle 9 alle 18\"; ObjectID = \"Wyh-29-eJM\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Aperto dalle 9 alle 18"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

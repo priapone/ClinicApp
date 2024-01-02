@@ -8,10 +8,12 @@
 import UIKit
 import FSPagerView
 import Firebase
+import CoreLocation
 
 class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,FSPagerViewDelegate,FSPagerViewDataSource{
     
 
+    @IBOutlet weak var labelPosition: UILabel!
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet var fsPagerView: UIView!
     @IBOutlet var mapView: UIView!
@@ -35,7 +37,7 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     var Itemlabel = ["Buy Medicine","Doctor","Set Reminder","Emergency"]
     var itemColor = ["EDF0F7","E8EDEE","FDEFEF","F7EDF1"]
     var pageviewimage = ["FsImage","67","68"]
-    
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +48,9 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
             let uid = user.uid
             loadDisplayName(uid, label: labelName)
         }
-        
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.delegate = self
+        locationManager.requestLocation()
         
         //MARK: - pagerview
         
@@ -66,9 +70,6 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
         pageControlView.setFillColor(.systemGray6, for: .normal)
         pageControlView.setFillColor(.Mycolor(), for: .selected)
     }
-    
-     
-    
     
     //MARK: - pagerview datasource
     
@@ -165,6 +166,35 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     @IBAction func mapBtnAction(_ sender: UIButton) {
         let vc = LocationVC()
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func retrieveCityName(latitude: Double, longitude: Double, completionHandler: @escaping (String?) -> Void)
+    {
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(CLLocation(latitude: latitude, longitude: longitude), completionHandler:
+        {
+            placeMarks, error in
+
+            completionHandler(placeMarks?.first?.locality)
+         })
+    }
+}
+
+extension HomeVC: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            let lat = location.coordinate.latitude
+            let lon = location.coordinate.longitude
+            print("Coordinate: \(lat), \(lon)")
+            retrieveCityName(latitude: lat, longitude: lon) { city in
+                self.labelPosition.text = city
+            }
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
     }
 }
 

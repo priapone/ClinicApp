@@ -38,9 +38,14 @@ struct cart {
 }
 
 struct DoctorDetail{
-    var image : UIImage
-    var name : String
-    var specilist : String
+    var image : UIImage = UIImage()
+    var name : String = ""
+    var surname: String = ""
+    var specialist : String = ""
+    var cv: String = ""
+    var morningSlot = [String()]
+    var afternoonSlot = [String()]
+    var eveningSlot = [String()]
 }
 
 struct Emergencydetail{

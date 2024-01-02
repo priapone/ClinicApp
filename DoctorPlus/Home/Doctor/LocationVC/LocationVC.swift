@@ -13,16 +13,16 @@ class LocationVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     
 
     @IBOutlet var mapView: MKMapView!
-    @IBOutlet var CollView: UIView!
+    @IBOutlet weak var CollView: UIView!
     var image = ["96","96","96"]
     let locationManager = CLLocationManager()
     let clinicLocation = CLLocationCoordinate2D(latitude: 45.488616843450856, longitude: 12.151485767698716)
+    var locationStart = CLLocationCoordinate2D()
     
-    @IBOutlet var collectionView: UICollectionView!{
-        didSet{
-            collectionView.register(UINib(nibName: "LoctionViewCell", bundle: nil), forCellWithReuseIdentifier: "LoctionViewCell")
+    @IBOutlet weak var collectionView: UICollectionView! {
+        didSet {
+            collectionView.register(UINib(nibName: "ClinicViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "ClinicViewCell")
         }
-        
     }
     
     override func viewDidLoad() {
@@ -30,19 +30,13 @@ class LocationVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         
         collectionView.delegate = self
         collectionView.dataSource = self
-        CollView.addLightShadow()
+        //CollView.addLightShadow()
         //locationManager.startUpdatingLocation()
         mapView.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
         locationManager.requestLocation()
-        
-        //create two dummy locations
-        //let loc1 = CLLocationCoordinate2D.init(latitude: 40.741895, longitude: -73.989308)
-        //let loc2 = CLLocationCoordinate2D.init(latitude: 40.728448, longitude: -73.717996)
-
-        //find route
-        //showRouteOnMap(pickupCoordinate: loc1, destinationCoordinate: loc2)
+    
         
         //MARK: - location set
         
@@ -66,7 +60,7 @@ class LocationVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "LoctionViewCell", for: indexPath) as! LoctionViewCell
+        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "ClinicViewCell", for: indexPath) as! ClinicViewCell
         cell.imagehospital.image = UIImage(named: image[indexPath.row])
         return cell
     }
@@ -79,7 +73,7 @@ class LocationVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     func render (_ location: CLLocation) {
         let annotation = MKPointAnnotation()
         annotation.coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        annotation.title = "Samarpan Hospital"
+        annotation.title = "Ambulatorio Spinea"
         mapView.addAnnotation(annotation)
         
         let region = MKCoordinateRegion(center: annotation.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
@@ -112,6 +106,13 @@ class LocationVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
             }
         }
 
+
+    @IBAction func buttonOpenMaps(_ sender: UIButton) {
+        let url = URL(string: "http://maps.apple.com/maps?saddr=&daddr=\(clinicLocation.latitude),\(clinicLocation.longitude)")
+        UIApplication.shared.open(url!)
+    }
+    
+
 }
 
 extension LocationVC: MKMapViewDelegate {
@@ -132,7 +133,7 @@ extension LocationVC: CLLocationManagerDelegate {
             let lat = location.coordinate.latitude
             let lon = location.coordinate.longitude
             print("Coordinate: \(lat), \(lon)")
-            let locationStart = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+            locationStart = CLLocationCoordinate2D(latitude: lat, longitude: lon)
             showRouteOnMap(pickupCoordinate: locationStart, destinationCoordinate: clinicLocation)
         }
     }

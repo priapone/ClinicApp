@@ -37,9 +37,9 @@ class DentistVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func DoctorCategory(){
         
          Dentist = [
-                    DoctorDetail(image: UIImage(named: "100")!, name: "Dr.Robot Smith", specilist: "Dentist"),
-                    DoctorDetail(image: UIImage(named: "200")!, name: "Dr.Robot Smith", specilist: "Dentist"),
-                    DoctorDetail(image: UIImage(named: "300")!, name: "Dr.robort Smith", specilist: "Dentist")
+            DoctorDetail(image: UIImage(named: "100")!, name: "Dentista", surname: "Di Prova", specialist: "Dentist", cv: ""),
+            DoctorDetail(image: UIImage(named: "200")!, name: "Dentista", surname: "Di Prova", specialist: "Dentist", cv: ""),
+            DoctorDetail(image: UIImage(named: "300")!, name: "Dentista", surname: "Di Prova", specialist: "Dentist", cv: "")
                  ]
     }
     
@@ -57,19 +57,20 @@ class DentistVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             leftCell.lblNameDoctor.text = "\(Dentistitem.name)"
             leftCell.imageDoctor.image  =  Dentistitem.image
             leftCell.lblNameDoctor.text = "\(Dentistitem.name)"
-            leftCell.lblSpecialist.text = "\(Dentistitem.specilist)"
+            leftCell.lblSpecialist.text = "\(Dentistitem.specialist)"
             return leftCell
         }
         else{
             rightCell.lblDoctorName.text = "\(Dentistitem.name)"
             rightCell.imageOfDoctor.image = Dentistitem.image
-            rightCell.lblSpecilist.text = "\(Dentistitem.specilist)"
+            rightCell.lblSpecilist.text = "\(Dentistitem.specialist)"
             return rightCell
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = DentistInformationVC()
+        let Dentistitem = Dentist[indexPath.row]
+        let vc = DentistInformationVC(doctor: Dentistitem)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

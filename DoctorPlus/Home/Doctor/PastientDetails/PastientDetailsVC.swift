@@ -9,22 +9,27 @@ import UIKit
 
 class PastientDetailsVC: UIViewController , UITextFieldDelegate {
 
+    @IBOutlet weak var txtSpecialist: UILabel!
+    @IBOutlet weak var txtDoctorName: UILabel!
     @IBOutlet var navigationView: Navigationbar!
     @IBOutlet var txtName: UITextField!
     @IBOutlet var txtPasientName: UITextField!
     @IBOutlet var txtPhonenumber: UITextField!
     @IBOutlet var txtReasonforVisit: UITextField!
+    var doctor: DoctorDetail = DoctorDetail()
     var isappointmentVC : Bool = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
        
-        navigationView.TitleLebal.text = "Patients detail"
+        navigationView.TitleLebal.text = "Dettaglio paziente"
         navigationView.onTapBackAction = {
             self.navigationController?.popViewController(animated: true)
         }
         
+        txtDoctorName.text = "dr. \(doctor.name) \(doctor.surname)"
+        txtSpecialist.text = "\(doctor.specialist)"
         txtName.delegate = self
         txtPhonenumber.delegate = self
         txtPasientName.delegate = self

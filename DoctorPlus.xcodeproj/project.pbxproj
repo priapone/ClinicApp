@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -37,8 +37,7 @@
 		EC2AEB792894FC3A00974C90 /* LocationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2AEB772894FC3A00974C90 /* LocationVC.xib */; };
 		EC2AEB7C2895001F00974C90 /* TitleWithBtnTBVHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2AEB7B2895001F00974C90 /* TitleWithBtnTBVHeaderView.swift */; };
 		EC2AEB802895003800974C90 /* TitleWithBtnTBVHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2AEB7F2895003800974C90 /* TitleWithBtnTBVHeaderView.xib */; };
-		EC2AEB8428950B3500974C90 /* LoctionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2AEB8228950B3500974C90 /* LoctionViewCell.swift */; };
-		EC2AEB8528950B3500974C90 /* LoctionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2AEB8328950B3500974C90 /* LoctionViewCell.xib */; };
+		EC2AEB8428950B3500974C90 /* LocationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2AEB8228950B3500974C90 /* LocationViewCell.swift */; };
 		EC3260252887D460001154A7 /* Navigationbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC3260242887D460001154A7 /* Navigationbar.xib */; };
 		EC35302D2897E9A700B2C1FF /* AddPillsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC35302B2897E9A700B2C1FF /* AddPillsVC.swift */; };
 		EC35302E2897E9A700B2C1FF /* AddPillsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC35302C2897E9A700B2C1FF /* AddPillsVC.xib */; };
@@ -170,6 +169,9 @@
 		ECCE8CFC2893F72E001D5054 /* DentistVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECCE8CFA2893F72E001D5054 /* DentistVC.xib */; };
 		ECCE8D092894011A001D5054 /* DentistInformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCE8D072894011A001D5054 /* DentistInformationVC.swift */; };
 		ECCE8D0A2894011A001D5054 /* DentistInformationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECCE8D082894011A001D5054 /* DentistInformationVC.xib */; };
+		F6065A7B2B4207CF00182CE0 /* LocationViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6065A7D2B4207CF00182CE0 /* LocationViewCell.xib */; };
+		F6065A862B42228600182CE0 /* ClinicViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6065A842B42228600182CE0 /* ClinicViewCell.swift */; };
+		F6065A872B42228600182CE0 /* ClinicViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6065A852B42228600182CE0 /* ClinicViewCell.xib */; };
 		F67585302B3F247500E48DA3 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675852F2B3F247500E48DA3 /* Alert.swift */; };
 		F675853A2B40577B00E48DA3 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67585382B40577B00E48DA3 /* SignupVC.swift */; };
 		F675853B2B40577B00E48DA3 /* SignupVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F67585392B40577B00E48DA3 /* SignupVC.xib */; };
@@ -213,8 +215,7 @@
 		EC2AEB772894FC3A00974C90 /* LocationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationVC.xib; sourceTree = "<group>"; };
 		EC2AEB7B2895001F00974C90 /* TitleWithBtnTBVHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleWithBtnTBVHeaderView.swift; sourceTree = "<group>"; };
 		EC2AEB7F2895003800974C90 /* TitleWithBtnTBVHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleWithBtnTBVHeaderView.xib; sourceTree = "<group>"; };
-		EC2AEB8228950B3500974C90 /* LoctionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoctionViewCell.swift; sourceTree = "<group>"; };
-		EC2AEB8328950B3500974C90 /* LoctionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoctionViewCell.xib; sourceTree = "<group>"; };
+		EC2AEB8228950B3500974C90 /* LocationViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewCell.swift; sourceTree = "<group>"; };
 		EC3260242887D460001154A7 /* Navigationbar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Navigationbar.xib; sourceTree = "<group>"; };
 		EC35302B2897E9A700B2C1FF /* AddPillsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPillsVC.swift; sourceTree = "<group>"; };
 		EC35302C2897E9A700B2C1FF /* AddPillsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPillsVC.xib; sourceTree = "<group>"; };
@@ -346,6 +347,10 @@
 		ECCE8CFA2893F72E001D5054 /* DentistVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DentistVC.xib; sourceTree = "<group>"; };
 		ECCE8D072894011A001D5054 /* DentistInformationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DentistInformationVC.swift; sourceTree = "<group>"; };
 		ECCE8D082894011A001D5054 /* DentistInformationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DentistInformationVC.xib; sourceTree = "<group>"; };
+		F6065A7C2B4207CF00182CE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LocationViewCell.xib; sourceTree = "<group>"; };
+		F6065A7E2B4207CF00182CE0 /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/LocationViewCell.xcstrings; sourceTree = "<group>"; };
+		F6065A842B42228600182CE0 /* ClinicViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicViewCell.swift; sourceTree = "<group>"; };
+		F6065A852B42228600182CE0 /* ClinicViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClinicViewCell.xib; sourceTree = "<group>"; };
 		F675852F2B3F247500E48DA3 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		F67585382B40577B00E48DA3 /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		F67585392B40577B00E48DA3 /* SignupVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignupVC.xib; sourceTree = "<group>"; };
@@ -553,8 +558,8 @@
 		EC2AEB8128950AFE00974C90 /* LocationCell */ = {
 			isa = PBXGroup;
 			children = (
-				EC2AEB8228950B3500974C90 /* LoctionViewCell.swift */,
-				EC2AEB8328950B3500974C90 /* LoctionViewCell.xib */,
+				EC2AEB8228950B3500974C90 /* LocationViewCell.swift */,
+				F6065A7D2B4207CF00182CE0 /* LocationViewCell.xib */,
 			);
 			path = LocationCell;
 			sourceTree = "<group>";
@@ -565,6 +570,8 @@
 				EC2AEB762894FC3A00974C90 /* LocationVC.swift */,
 				EC2AEB772894FC3A00974C90 /* LocationVC.xib */,
 				EC2AEB8128950AFE00974C90 /* LocationCell */,
+				F6065A842B42228600182CE0 /* ClinicViewCell.swift */,
+				F6065A852B42228600182CE0 /* ClinicViewCell.xib */,
 			);
 			path = LocationVC;
 			sourceTree = "<group>";
@@ -1254,7 +1261,7 @@
 				EC12C593289A72C9004F1771 /* HelpVC.xib in Resources */,
 				EC370D9F287EEA9D005CC5CC /* Poppins-ExtraLightItalic.ttf in Resources */,
 				ECA7FCD5288E8D1200717498 /* AddressVC.xib in Resources */,
-				EC2AEB8528950B3500974C90 /* LoctionViewCell.xib in Resources */,
+				F6065A7B2B4207CF00182CE0 /* LocationViewCell.xib in Resources */,
 				ECBA75AC288170A500E4674B /* ForgetVC.xib in Resources */,
 				EC189634287D82AA00D7A0FF /* LaunchScreen.storyboard in Resources */,
 				EC5C866D289A50B300A50E87 /* MyAppointmentVC.xib in Resources */,
@@ -1300,6 +1307,7 @@
 				ECCE8CF52893EE3E001D5054 /* cellForDoctorCategory.xib in Resources */,
 				EC370D97287EEA9D005CC5CC /* Poppins-Bold.ttf in Resources */,
 				EC12C5A7289A85FD004F1771 /* LogoutVC.xib in Resources */,
+				F6065A872B42228600182CE0 /* ClinicViewCell.xib in Resources */,
 				EC0DA682288FEB8A000DE71B /* SucessVC.xib in Resources */,
 				EC35302E2897E9A700B2C1FF /* AddPillsVC.xib in Resources */,
 				EC677D62288560A500EF3D1B /* Storyboard.storyboard in Resources */,
@@ -1408,6 +1416,7 @@
 				EC5DC74E28979D4600265F97 /* TimeCollectionViewCell.swift in Sources */,
 				EC5C8676289A545600A50E87 /* MedicalDocumentVC.swift in Sources */,
 				EC12C592289A72C9004F1771 /* HelpVC.swift in Sources */,
+				F6065A862B42228600182CE0 /* ClinicViewCell.swift in Sources */,
 				EC5DC7442897980700265F97 /* DatePickerCell.swift in Sources */,
 				EC8666622897DDD50041EB6B /* ReminderViewCell.swift in Sources */,
 				EC38F4B628993B120084B946 /* ChatRightCell.swift in Sources */,
@@ -1445,7 +1454,7 @@
 				ECA7FCEA288EAF5300717498 /* AddAddressVC.swift in Sources */,
 				ECB398882889698800CE03A5 /* PharmacyVC.swift in Sources */,
 				F67585302B3F247500E48DA3 /* Alert.swift in Sources */,
-				EC2AEB8428950B3500974C90 /* LoctionViewCell.swift in Sources */,
+				EC2AEB8428950B3500974C90 /* LocationViewCell.swift in Sources */,
 				EC9D3260288A963E00DB6DA1 /* MedicineVCCell.swift in Sources */,
 				ECA7FCEF288EB67B00717498 /* ChooseCreditcardVC.swift in Sources */,
 				EC189628287D82A900D7A0FF /* AppDelegate.swift in Sources */,
@@ -1485,6 +1494,15 @@
 				EC189633287D82AA00D7A0FF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F6065A7D2B4207CF00182CE0 /* LocationViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6065A7C2B4207CF00182CE0 /* Base */,
+				F6065A7E2B4207CF00182CE0 /* mul */,
+			);
+			name = LocationViewCell.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

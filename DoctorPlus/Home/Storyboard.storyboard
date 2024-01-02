@@ -549,6 +549,7 @@
                     <connections>
                         <outlet property="homecollectionView" destination="Ptw-Yq-lox" id="eKd-15-llS"/>
                         <outlet property="labelName" destination="kcS-PX-gwB" id="k7C-2c-jaq"/>
+                        <outlet property="labelPosition" destination="TTk-S4-m0w" id="YT1-Iv-LKd"/>
                         <outlet property="mapView" destination="IWF-Ki-6GA" id="uPY-22-c4q"/>
                         <outlet property="pageControlView" destination="MVq-vA-Lxm" id="2GR-y0-od1"/>
                         <outlet property="pagerview" destination="Qy5-Sd-8dr" id="5cj-wT-1jC"/>

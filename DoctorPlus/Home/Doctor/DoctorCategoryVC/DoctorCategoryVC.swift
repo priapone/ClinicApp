@@ -22,7 +22,7 @@ class DoctorCategoryVC: UIViewController, UICollectionViewDelegate, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationView.TitleLebal.text = "Categories"
+        navigationView.TitleLebal.text = "Categorie"
         navigationView.onTapBackAction = {
             self.navigationController?.popViewController(animated: true)
         }

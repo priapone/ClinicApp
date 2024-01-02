@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -20,13 +21,15 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PastientDetailsVC" customModule="test2" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PastientDetailsVC" customModule="DoctorPlus" customModuleProvider="target">
             <connections>
                 <outlet property="navigationView" destination="LOC-9H-rYx" id="6nM-pj-4Nu"/>
+                <outlet property="txtDoctorName" destination="G0b-pe-nWK" id="qP8-Jx-0DR"/>
                 <outlet property="txtName" destination="5Ou-Ou-XJD" id="b6c-ym-Zhl"/>
                 <outlet property="txtPasientName" destination="3Cn-9I-an7" id="aT8-9d-hPQ"/>
                 <outlet property="txtPhonenumber" destination="17S-l5-otu" id="6Mr-1h-0Jb"/>
                 <outlet property="txtReasonforVisit" destination="h7g-Vv-3xS" id="f4e-EP-g0H"/>
+                <outlet property="txtSpecialist" destination="9aV-r9-42y" id="ISe-mT-A0l"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -38,7 +41,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y0T-iA-vBI">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOC-9H-rYx" customClass="Navigationbar" customModule="test2" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOC-9H-rYx" customClass="Navigationbar" customModule="DoctorPlus" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
@@ -67,7 +70,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Samarpan hospital " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="331-kl-m5Y">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ambulatorio Spinea" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="331-kl-m5Y">
                                                     <rect key="frame" x="10" y="140.5" width="354" height="20"/>
                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -336,7 +339,7 @@
     </objects>
     <resources>
         <image name="Ellipse 15" width="106" height="106"/>
-        <image name="checkmark.seal" catalog="system" width="128" height="128"/>
+        <image name="checkmark.seal" catalog="system" width="128" height="124"/>
         <namedColor name="AppThemeColor">
             <color red="0.023529411764705882" green="0.56862745098039214" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
