@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Navigationbar" customModule="test2" customModuleProvider="target">
+            <connections>
+                <outlet property="TitleLebal" destination="onA-bk-MCf" id="9EM-19-hpg"/>
+                <outlet property="backbutton" destination="iir-qn-Rip" id="bWd-TE-q6j"/>
+                <outlet property="contenetview" destination="iN0-l3-epB" id="ABj-bk-Z5d"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="482" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iir-qn-Rip">
+                    <rect key="frame" x="25" y="60" width="22" height="22"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="action bar"/>
+                    <connections>
+                        <action selector="ButtonClick:" destination="-1" eventType="touchUpInside" id="3Br-Sg-cJU"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onA-bk-MCf">
+                    <rect key="frame" x="62" y="45" width="118.5" height="55"/>
+                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstItem="onA-bk-MCf" firstAttribute="leading" secondItem="iir-qn-Rip" secondAttribute="trailing" constant="15" id="Lda-ia-PnA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="onA-bk-MCf" secondAttribute="trailing" constant="15" id="VwQ-dW-6XC"/>
+                <constraint firstItem="onA-bk-MCf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="45" id="YI7-c4-D99"/>
+                <constraint firstItem="iir-qn-Rip" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="aez-xn-YxE"/>
+                <constraint firstAttribute="bottom" secondItem="onA-bk-MCf" secondAttribute="bottom" id="dSS-9I-a5q"/>
+                <constraint firstItem="iir-qn-Rip" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="w0V-Rh-gdI"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="567" y="7"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="action bar" width="22" height="22"/>
+    </resources>
+</document>

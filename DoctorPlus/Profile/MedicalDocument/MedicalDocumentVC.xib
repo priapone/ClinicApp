@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MedicalDocumentVC" customModule="test2" customModuleProvider="target">
+            <connections>
+                <outlet property="navigationView" destination="bB6-cF-sCE" id="11U-cg-dJ0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YQ2-0S-CrH">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bB6-cF-sCE" customClass="Navigationbar" customModule="test2" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="Jli-Yz-j5J"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZwO-9O-tYw">
+                            <rect key="frame" x="0.0" y="100" width="414" height="796"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Online document-rafiki 1" translatesAutoresizingMaskIntoConstraints="NO" id="H76-Xq-efy">
+                                    <rect key="frame" x="20" y="60" width="374" height="300"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="300" id="V47-ac-4cm"/>
+                                    </constraints>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="ZBY-24-60I">
+                                    <rect key="frame" x="20" y="370" width="374" height="83"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medical Documnet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPU-Ni-wza">
+                                            <rect key="frame" x="100.5" y="0.0" width="173" height="25.5"/>
+                                            <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3e3-RP-oPa">
+                                            <rect key="frame" x="25.5" y="43.5" width="323" height="39.5"/>
+                                            <string key="text">Keep all your medical document at one place.
+and stop worrying about lossing them.</string>
+                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdS-Q3-6wt">
+                                    <rect key="frame" x="20" y="503" width="374" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="grg-Vh-wT3"/>
+                                    </constraints>
+                                    <color key="tintColor" red="0.023529411760000001" green="0.56862745100000001" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" title="Upload">
+                                        <fontDescription key="titleFontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
+                                        <color key="baseBackgroundColor" red="0.023529411760000001" green="0.56862745100000001" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </buttonConfiguration>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="pdS-Q3-6wt" secondAttribute="trailing" constant="20" id="6xn-7i-Tfq"/>
+                                <constraint firstAttribute="trailing" secondItem="ZBY-24-60I" secondAttribute="trailing" constant="20" id="Etu-S6-Ypc"/>
+                                <constraint firstItem="pdS-Q3-6wt" firstAttribute="leading" secondItem="ZwO-9O-tYw" secondAttribute="leading" constant="20" id="F7k-3b-VV5"/>
+                                <constraint firstItem="pdS-Q3-6wt" firstAttribute="top" secondItem="ZBY-24-60I" secondAttribute="bottom" constant="50" id="KKt-Bn-ax4"/>
+                                <constraint firstAttribute="trailing" secondItem="H76-Xq-efy" secondAttribute="trailing" constant="20" id="OdF-8q-pyY"/>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="pdS-Q3-6wt" secondAttribute="bottom" id="c0u-IO-wAJ"/>
+                                <constraint firstItem="ZBY-24-60I" firstAttribute="leading" secondItem="ZwO-9O-tYw" secondAttribute="leading" constant="20" id="iA3-Bt-cIZ"/>
+                                <constraint firstItem="ZBY-24-60I" firstAttribute="top" secondItem="H76-Xq-efy" secondAttribute="bottom" constant="10" id="km6-p0-u3T"/>
+                                <constraint firstItem="H76-Xq-efy" firstAttribute="leading" secondItem="ZwO-9O-tYw" secondAttribute="leading" constant="20" id="tOx-m2-Hu0"/>
+                                <constraint firstItem="H76-Xq-efy" firstAttribute="top" secondItem="ZwO-9O-tYw" secondAttribute="top" constant="60" id="vsl-ya-P9c"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="bB6-cF-sCE" firstAttribute="leading" secondItem="YQ2-0S-CrH" secondAttribute="leading" id="JpW-gA-DYB"/>
+                        <constraint firstAttribute="trailing" secondItem="bB6-cF-sCE" secondAttribute="trailing" id="RSn-y4-YLb"/>
+                        <constraint firstItem="bB6-cF-sCE" firstAttribute="top" secondItem="YQ2-0S-CrH" secondAttribute="top" id="Tm0-k0-d9l"/>
+                        <constraint firstAttribute="bottom" secondItem="ZwO-9O-tYw" secondAttribute="bottom" id="Zwa-ug-Dk4"/>
+                        <constraint firstItem="ZwO-9O-tYw" firstAttribute="leading" secondItem="YQ2-0S-CrH" secondAttribute="leading" id="dOn-HZ-Ynk"/>
+                        <constraint firstAttribute="trailing" secondItem="ZwO-9O-tYw" secondAttribute="trailing" id="iGT-rD-Txb"/>
+                        <constraint firstItem="ZwO-9O-tYw" firstAttribute="top" secondItem="bB6-cF-sCE" secondAttribute="bottom" id="vQf-Ln-9ex"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YQ2-0S-CrH" secondAttribute="trailing" id="4oi-0B-DIa"/>
+                <constraint firstItem="YQ2-0S-CrH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6ox-R8-Emb"/>
+                <constraint firstItem="YQ2-0S-CrH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9La-ts-6C8"/>
+                <constraint firstAttribute="bottom" secondItem="YQ2-0S-CrH" secondAttribute="bottom" id="FB5-Vg-8sy"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="95.758928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Online document-rafiki 1" width="939" height="939"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SucessVC" customModule="test2" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionTxt" destination="qHB-lC-dtS" id="r7J-Jt-6hU"/>
+                <outlet property="imageView" destination="h2n-Hx-5mb" id="37O-Gc-rY6"/>
+                <outlet property="lblAppointment" destination="jT5-nX-zJy" id="bmM-At-f9r"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Us-6x-H10">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xFZ-jP-5MC">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mobile payments-pana 1" translatesAutoresizingMaskIntoConstraints="NO" id="h2n-Hx-5mb">
+                                    <rect key="frame" x="30" y="170" width="354" height="300"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="300" id="Fkp-Gu-ZkL"/>
+                                    </constraints>
+                                </imageView>
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Appointment Confirmed" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jT5-nX-zJy">
+                                    <rect key="frame" x="20" y="490" width="374" height="25.5"/>
+                                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
+                                    <color key="textColor" name="AppThemeColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHB-lC-dtS">
+                                    <rect key="frame" x="20" y="535.5" width="374" height="39.5"/>
+                                    <string key="text">page while be automatically redirected to the 
+main page or click button below</string>
+                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                    <color key="textColor" red="0.71764705880000002" green="0.71764705880000002" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePz-Ij-Ovw">
+                                    <rect key="frame" x="122" y="822" width="148" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="g7X-cq-sNh"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Back to home">
+                                        <fontDescription key="titleFontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
+                                        <color key="baseForegroundColor" red="0.023529411760000001" green="0.56862745100000001" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="backBtnAction:" destination="-1" eventType="touchUpInside" id="cRE-WO-mzC"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="jT5-nX-zJy" firstAttribute="leading" secondItem="xFZ-jP-5MC" secondAttribute="leading" constant="20" id="1CA-m4-mBL"/>
+                                <constraint firstAttribute="trailing" secondItem="ePz-Ij-Ovw" secondAttribute="trailing" constant="144" id="2Tt-TX-deg"/>
+                                <constraint firstItem="ePz-Ij-Ovw" firstAttribute="leading" secondItem="xFZ-jP-5MC" secondAttribute="leading" constant="122" id="37T-kp-zgS"/>
+                                <constraint firstAttribute="trailing" secondItem="qHB-lC-dtS" secondAttribute="trailing" constant="20" id="3Ih-iV-uyl"/>
+                                <constraint firstItem="jT5-nX-zJy" firstAttribute="top" secondItem="h2n-Hx-5mb" secondAttribute="bottom" constant="20" id="3YF-JV-vug"/>
+                                <constraint firstItem="qHB-lC-dtS" firstAttribute="top" secondItem="jT5-nX-zJy" secondAttribute="bottom" constant="20" id="58n-t8-i9k"/>
+                                <constraint firstItem="qHB-lC-dtS" firstAttribute="leading" secondItem="xFZ-jP-5MC" secondAttribute="leading" constant="20" id="DAn-lL-aHS"/>
+                                <constraint firstAttribute="bottom" secondItem="ePz-Ij-Ovw" secondAttribute="bottom" id="ZTR-qS-2vU"/>
+                                <constraint firstAttribute="trailing" secondItem="jT5-nX-zJy" secondAttribute="trailing" constant="20" id="ZwD-cM-uOt"/>
+                                <constraint firstItem="h2n-Hx-5mb" firstAttribute="top" secondItem="xFZ-jP-5MC" secondAttribute="top" constant="170" id="hFa-Q6-yhE"/>
+                                <constraint firstItem="h2n-Hx-5mb" firstAttribute="leading" secondItem="xFZ-jP-5MC" secondAttribute="leading" constant="30" id="wdR-Li-hAl"/>
+                                <constraint firstAttribute="trailing" secondItem="h2n-Hx-5mb" secondAttribute="trailing" constant="30" id="xhQ-Cy-Qlx"/>
+                                <constraint firstItem="ePz-Ij-Ovw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qHB-lC-dtS" secondAttribute="bottom" id="yBl-C6-C3m"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="hrX-wn-fsH" firstAttribute="trailing" secondItem="xFZ-jP-5MC" secondAttribute="trailing" id="AAf-6R-A8S"/>
+                        <constraint firstItem="hrX-wn-fsH" firstAttribute="bottom" secondItem="xFZ-jP-5MC" secondAttribute="bottom" id="G2g-Wm-a6V"/>
+                        <constraint firstItem="xFZ-jP-5MC" firstAttribute="leading" secondItem="hrX-wn-fsH" secondAttribute="leading" id="NmU-Hz-Zns"/>
+                        <constraint firstItem="xFZ-jP-5MC" firstAttribute="height" secondItem="ajV-h7-rZI" secondAttribute="height" priority="250" id="aHK-jg-6WV"/>
+                        <constraint firstItem="xFZ-jP-5MC" firstAttribute="width" secondItem="ajV-h7-rZI" secondAttribute="width" id="eJO-Sd-1en"/>
+                        <constraint firstItem="xFZ-jP-5MC" firstAttribute="top" secondItem="hrX-wn-fsH" secondAttribute="top" id="yLP-YR-f2B"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="ajV-h7-rZI"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="hrX-wn-fsH"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="8Us-6x-H10" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4sl-F6-gH1"/>
+                <constraint firstItem="8Us-6x-H10" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Q6P-Jt-QxU"/>
+                <constraint firstItem="8Us-6x-H10" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="V7K-92-qSi"/>
+                <constraint firstItem="8Us-6x-H10" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="WzH-sQ-KIs"/>
+            </constraints>
+            <point key="canvasLocation" x="-746.37681159420299" y="176.78571428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Mobile payments-pana 1" width="939" height="939"/>
+        <namedColor name="AppThemeColor">
+            <color red="0.023529411764705882" green="0.56862745098039214" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

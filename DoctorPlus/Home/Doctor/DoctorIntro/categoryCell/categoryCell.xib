@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="77" id="KGk-i7-Jjw" customClass="categoryCell" customModule="test2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="422" height="77"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="422" height="77"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sP8-lG-KSx">
+                        <rect key="frame" x="15" y="4" width="392" height="50"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="c64-uY-vsx">
+                                <rect key="frame" x="0.0" y="0.0" width="392" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="XcO-da-6RH"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="SLv-LP-Wzo">
+                                    <size key="itemSize" width="653" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="c64-uY-vsx" firstAttribute="top" secondItem="sP8-lG-KSx" secondAttribute="top" id="DmP-Vb-9Pe"/>
+                            <constraint firstAttribute="bottom" secondItem="c64-uY-vsx" secondAttribute="bottom" id="ZLP-Cf-wUA"/>
+                            <constraint firstAttribute="trailing" secondItem="c64-uY-vsx" secondAttribute="trailing" id="rAv-H5-H9z"/>
+                            <constraint firstItem="c64-uY-vsx" firstAttribute="leading" secondItem="sP8-lG-KSx" secondAttribute="leading" id="ye5-bL-ALJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="sP8-lG-KSx" secondAttribute="trailing" constant="15" id="Q4K-cX-COe"/>
+                    <constraint firstItem="sP8-lG-KSx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="SfL-Nh-Qh8"/>
+                    <constraint firstItem="sP8-lG-KSx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="aba-iE-S7A"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="sP8-lG-KSx" secondAttribute="bottom" constant="8" id="iCq-cx-aNn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="collectionView" destination="c64-uY-vsx" id="IiZ-Td-2hv"/>
+                <outlet property="collectionViewHeight" destination="XcO-da-6RH" id="BUi-ba-Gei"/>
+            </connections>
+            <point key="canvasLocation" x="205.79710144927537" y="105.46875"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

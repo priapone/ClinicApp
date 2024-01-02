@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddressVC" customModule="test2" customModuleProvider="target">
+            <connections>
+                <outlet property="navigationView" destination="Nfd-2o-ikT" id="5jn-jE-dS6"/>
+                <outlet property="tableView" destination="Uru-z5-POA" id="KSL-b7-WV3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nfd-2o-ikT" customClass="Navigationbar" customModule="test2" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="fRc-4X-fFQ"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Uru-z5-POA">
+                    <rect key="frame" x="0.0" y="100" width="414" height="697"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0uf-DO-mxm">
+                    <rect key="frame" x="20" y="817" width="374" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="uPm-wa-w5b"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Continue">
+                        <fontDescription key="titleFontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
+                        <color key="baseBackgroundColor" name="AppThemeColor"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="ContinueBtnAction:" destination="-1" eventType="touchUpInside" id="SGH-vs-i7F"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Uru-z5-POA" firstAttribute="top" secondItem="Nfd-2o-ikT" secondAttribute="bottom" id="6DL-5a-FcQ"/>
+                <constraint firstItem="0uf-DO-mxm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="73v-ml-NeR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Uru-z5-POA" secondAttribute="trailing" id="9MN-Jo-jIq"/>
+                <constraint firstItem="Nfd-2o-ikT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="CkL-lu-J1m"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0uf-DO-mxm" secondAttribute="trailing" constant="20" id="FtF-ax-pMo"/>
+                <constraint firstItem="Nfd-2o-ikT" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="REy-Uv-EWt"/>
+                <constraint firstItem="0uf-DO-mxm" firstAttribute="top" secondItem="Uru-z5-POA" secondAttribute="bottom" constant="20" id="aBO-j5-610"/>
+                <constraint firstItem="Uru-z5-POA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eik-t3-FxA"/>
+                <constraint firstItem="0uf-DO-mxm" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="naN-yg-Qxe"/>
+                <constraint firstItem="Nfd-2o-ikT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="p0c-gr-0pH"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="95.758928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AppThemeColor">
+            <color red="0.023529411764705882" green="0.56862745098039214" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

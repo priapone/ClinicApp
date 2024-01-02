@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SerchVC" customModule="DoctorPlus" customModuleProvider="target">
+            <connections>
+                <outlet property="colletionView" destination="Xe3-bu-qs8" id="K8h-PC-ttO"/>
+                <outlet property="navigationView" destination="w1z-ma-6sF" id="jDi-sQ-0T9"/>
+                <outlet property="serchBar" destination="qe0-qf-U7Z" id="qyo-WW-8QF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oug-4E-AhJ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w1z-ma-6sF" customClass="Navigationbar" customModule="DoctorPlus" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="hsT-f3-rM0"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wsI-TB-0xE">
+                            <rect key="frame" x="0.0" y="100" width="414" height="50"/>
+                            <subviews>
+                                <searchBar contentMode="scaleAspectFill" searchBarStyle="minimal" placeholder="What are you looking to buy" translatesAutoresizingMaskIntoConstraints="NO" id="qe0-qf-U7Z">
+                                    <rect key="frame" x="15" y="0.0" width="349" height="50"/>
+                                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                    <scopeButtonTitles>
+                                        <string>Title</string>
+                                        <string>Title</string>
+                                    </scopeButtonTitles>
+                                </searchBar>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhR-Fo-hkB">
+                                    <rect key="frame" x="364" y="0.0" width="35" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="35" id="9WV-eL-kFy"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="fluent_barcode-scanner-24-filled"/>
+                                    <connections>
+                                        <action selector="scanBtnAction:" destination="-1" eventType="touchUpInside" id="sXl-LL-jNQ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="qe0-qf-U7Z" secondAttribute="bottom" id="4bD-1t-i39"/>
+                                <constraint firstItem="BhR-Fo-hkB" firstAttribute="leading" secondItem="qe0-qf-U7Z" secondAttribute="trailing" id="78j-2W-gJX"/>
+                                <constraint firstItem="qe0-qf-U7Z" firstAttribute="leading" secondItem="wsI-TB-0xE" secondAttribute="leading" constant="15" id="9bG-ye-oHv"/>
+                                <constraint firstItem="qe0-qf-U7Z" firstAttribute="top" secondItem="wsI-TB-0xE" secondAttribute="top" id="Oxw-kK-LWJ"/>
+                                <constraint firstItem="BhR-Fo-hkB" firstAttribute="top" secondItem="wsI-TB-0xE" secondAttribute="top" id="Vey-vU-Ukb"/>
+                                <constraint firstAttribute="bottom" secondItem="BhR-Fo-hkB" secondAttribute="bottom" id="fqj-cJ-Ulg"/>
+                                <constraint firstAttribute="trailing" secondItem="BhR-Fo-hkB" secondAttribute="trailing" constant="15" id="hpz-QS-zVm"/>
+                                <constraint firstAttribute="height" constant="50" id="kt4-B8-uTh"/>
+                            </constraints>
+                        </view>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Xe3-bu-qs8">
+                            <rect key="frame" x="20" y="150" width="374" height="746"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="cVk-ig-0Nh">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="5" maxX="0.0" maxY="10"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Xe3-bu-qs8" secondAttribute="bottom" id="DFF-hP-sGw"/>
+                        <constraint firstItem="wsI-TB-0xE" firstAttribute="top" secondItem="w1z-ma-6sF" secondAttribute="bottom" id="MGa-Pq-uCZ"/>
+                        <constraint firstAttribute="trailing" secondItem="Xe3-bu-qs8" secondAttribute="trailing" constant="20" id="PAt-6t-8Na"/>
+                        <constraint firstItem="w1z-ma-6sF" firstAttribute="leading" secondItem="oug-4E-AhJ" secondAttribute="leading" id="TgC-rh-gm5"/>
+                        <constraint firstItem="wsI-TB-0xE" firstAttribute="leading" secondItem="oug-4E-AhJ" secondAttribute="leading" id="djG-JU-7ke"/>
+                        <constraint firstItem="wsI-TB-0xE" firstAttribute="leading" secondItem="oug-4E-AhJ" secondAttribute="leading" id="eoa-Ss-sXE"/>
+                        <constraint firstItem="Xe3-bu-qs8" firstAttribute="leading" secondItem="oug-4E-AhJ" secondAttribute="leading" constant="20" id="hg5-c6-P72"/>
+                        <constraint firstItem="Xe3-bu-qs8" firstAttribute="top" secondItem="wsI-TB-0xE" secondAttribute="bottom" id="iBr-2y-JJH"/>
+                        <constraint firstItem="w1z-ma-6sF" firstAttribute="top" secondItem="oug-4E-AhJ" secondAttribute="top" id="icz-Wh-yKW"/>
+                        <constraint firstAttribute="trailing" secondItem="wsI-TB-0xE" secondAttribute="trailing" id="j3f-TD-LrW"/>
+                        <constraint firstAttribute="trailing" secondItem="w1z-ma-6sF" secondAttribute="trailing" id="qA1-Ds-mqI"/>
+                        <constraint firstAttribute="trailing" secondItem="wsI-TB-0xE" secondAttribute="trailing" id="t3q-gP-CQi"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="oug-4E-AhJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BBB-bC-hI9"/>
+                <constraint firstItem="oug-4E-AhJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="JNP-qX-Ixi"/>
+                <constraint firstAttribute="trailing" secondItem="oug-4E-AhJ" secondAttribute="trailing" id="eLl-b7-gyB"/>
+                <constraint firstAttribute="bottom" secondItem="oug-4E-AhJ" secondAttribute="bottom" id="pHm-w7-sK1"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="94.419642857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="fluent_barcode-scanner-24-filled" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

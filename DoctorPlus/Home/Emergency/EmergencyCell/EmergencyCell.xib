@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EmergencyCell" id="gTV-IL-0wX" customClass="EmergencyCell" customModule="test2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="550" height="332"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="550" height="332"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CAd-7D-udl">
+                        <rect key="frame" x="0.0" y="0.0" width="550" height="332"/>
+                        <subviews>
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QXf-IX-8Vp">
+                                <rect key="frame" x="10" y="10" width="530" height="312"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ambulance" translatesAutoresizingMaskIntoConstraints="NO" id="1gV-vI-eYG">
+                                        <rect key="frame" x="217.5" y="108.5" width="95" height="95"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="95" id="2PS-G1-KaK"/>
+                                            <constraint firstAttribute="width" constant="95" id="xU2-J5-OVe"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call ambulance" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWE-Jc-Nwd">
+                                        <rect key="frame" x="20" y="208.5" width="490" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wex-7d-fpz">
+                                        <rect key="frame" x="30" y="239" width="470" height="59"/>
+                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum quam tempus lectus eu non aliquam sit. Ipsum etiam vitae ut pellentesque interdum </string>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="FWE-Jc-Nwd" secondAttribute="trailing" constant="20" id="CrK-6V-EFc"/>
+                                    <constraint firstItem="1gV-vI-eYG" firstAttribute="centerY" secondItem="QXf-IX-8Vp" secondAttribute="centerY" id="E2k-lw-tan"/>
+                                    <constraint firstItem="FWE-Jc-Nwd" firstAttribute="leading" secondItem="QXf-IX-8Vp" secondAttribute="leading" constant="20" id="FFU-eh-ZdC"/>
+                                    <constraint firstItem="FWE-Jc-Nwd" firstAttribute="top" secondItem="1gV-vI-eYG" secondAttribute="bottom" constant="5" id="MVI-cU-Te1"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wex-7d-fpz" secondAttribute="trailing" constant="30" id="V8t-gD-iJB"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Wex-7d-fpz" secondAttribute="bottom" id="ZC5-52-8qq"/>
+                                    <constraint firstItem="1gV-vI-eYG" firstAttribute="centerX" secondItem="QXf-IX-8Vp" secondAttribute="centerX" id="igC-DW-n7n"/>
+                                    <constraint firstItem="Wex-7d-fpz" firstAttribute="leading" secondItem="QXf-IX-8Vp" secondAttribute="leading" constant="30" id="tJp-3t-o2X"/>
+                                    <constraint firstItem="Wex-7d-fpz" firstAttribute="top" secondItem="FWE-Jc-Nwd" secondAttribute="bottom" constant="5" id="vrR-Xq-eUg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="QXf-IX-8Vp" secondAttribute="bottom" constant="10" id="Cg1-hH-hXe"/>
+                            <constraint firstAttribute="trailing" secondItem="QXf-IX-8Vp" secondAttribute="trailing" constant="10" id="hsz-Lm-ztz"/>
+                            <constraint firstItem="QXf-IX-8Vp" firstAttribute="top" secondItem="CAd-7D-udl" secondAttribute="top" constant="10" id="jjI-P9-RKq"/>
+                            <constraint firstItem="QXf-IX-8Vp" firstAttribute="leading" secondItem="CAd-7D-udl" secondAttribute="leading" constant="10" id="lcg-kr-7PK"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="CAd-7D-udl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="LV1-Ce-aVI"/>
+                <constraint firstItem="CAd-7D-udl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="oUu-na-faE"/>
+                <constraint firstAttribute="trailing" secondItem="CAd-7D-udl" secondAttribute="trailing" id="oWq-Bn-L08"/>
+                <constraint firstAttribute="bottom" secondItem="CAd-7D-udl" secondAttribute="bottom" id="tBw-3g-jNM"/>
+            </constraints>
+            <size key="customSize" width="550" height="332"/>
+            <connections>
+                <outlet property="imageForamublance" destination="1gV-vI-eYG" id="9Ux-te-Qjg"/>
+                <outlet property="lblDecription" destination="Wex-7d-fpz" id="Y20-sQ-10t"/>
+                <outlet property="lblTitle" destination="FWE-Jc-Nwd" id="4B5-8a-J9X"/>
+            </connections>
+            <point key="canvasLocation" x="224.63768115942031" y="64.955357142857139"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ambulance" width="190" height="190"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

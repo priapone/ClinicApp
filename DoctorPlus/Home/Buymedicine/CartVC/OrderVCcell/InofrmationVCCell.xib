@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mulish-Medium.ttf">
+            <string>Mulish-Medium</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="InofrmationVCCell" rowHeight="144" id="KGk-i7-Jjw" customClass="InofrmationVCCell" customModule="test2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="119"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="119"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uBa-1o-kaa">
+                        <rect key="frame" x="20" y="4" width="335" height="111"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order information" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbU-gK-XvW">
+                                <rect key="frame" x="10" y="5" width="305" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="Vdq-fW-i5b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hue-9g-Rza">
+                                <rect key="frame" x="10" y="34" width="77" height="66"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtotal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HO-ln-wYa">
+                                        <rect key="frame" x="0.0" y="0.0" width="55.5" height="18"/>
+                                        <fontDescription key="fontDescription" name="Mulish-Medium" family="Mulish" pointSize="14"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery fee" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUX-aW-GVZ">
+                                        <rect key="frame" x="0.0" y="23" width="77" height="18"/>
+                                        <fontDescription key="fontDescription" name="Mulish-Medium" family="Mulish" pointSize="14"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1se-tb-n1O">
+                                        <rect key="frame" x="0.0" y="46" width="36" height="20"/>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hRE-ea-3er">
+                                <rect key="frame" x="279.5" y="34" width="45.5" height="66"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$23.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9FK-H8-h8z">
+                                        <rect key="frame" x="0.0" y="0.0" width="45.5" height="18"/>
+                                        <fontDescription key="fontDescription" name="Mulish-Medium" family="Mulish" pointSize="14"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$5.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfO-ZN-phG">
+                                        <rect key="frame" x="8.5" y="23" width="37" height="18"/>
+                                        <fontDescription key="fontDescription" name="Mulish-Medium" family="Mulish" pointSize="14"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$28.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ta4-PG-dwW">
+                                        <rect key="frame" x="6.5" y="46" width="39" height="20"/>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hue-9g-Rza" secondAttribute="bottom" constant="5" id="3Pp-O2-tbM"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hRE-ea-3er" secondAttribute="bottom" constant="5" id="GXG-mV-zWJ"/>
+                            <constraint firstAttribute="trailing" secondItem="hRE-ea-3er" secondAttribute="trailing" constant="10" id="MSB-Ni-D67"/>
+                            <constraint firstAttribute="trailing" secondItem="TbU-gK-XvW" secondAttribute="trailing" constant="20" id="Mco-7e-U3R"/>
+                            <constraint firstItem="hRE-ea-3er" firstAttribute="top" secondItem="TbU-gK-XvW" secondAttribute="bottom" constant="6" id="Q6i-5F-v0m"/>
+                            <constraint firstItem="hue-9g-Rza" firstAttribute="top" secondItem="TbU-gK-XvW" secondAttribute="bottom" constant="6" id="Zmg-Xa-tS8"/>
+                            <constraint firstItem="TbU-gK-XvW" firstAttribute="leading" secondItem="uBa-1o-kaa" secondAttribute="leading" constant="10" id="keN-og-Cly"/>
+                            <constraint firstItem="hue-9g-Rza" firstAttribute="leading" secondItem="uBa-1o-kaa" secondAttribute="leading" constant="10" id="q7R-fK-6Dr"/>
+                            <constraint firstItem="TbU-gK-XvW" firstAttribute="top" secondItem="uBa-1o-kaa" secondAttribute="top" constant="5" id="t90-tM-09q"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="uBa-1o-kaa" secondAttribute="bottom" constant="4" id="LNh-Kz-pEt"/>
+                    <constraint firstItem="uBa-1o-kaa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="hrg-h5-Uyp"/>
+                    <constraint firstItem="uBa-1o-kaa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="jfs-Qb-GFM"/>
+                    <constraint firstAttribute="trailing" secondItem="uBa-1o-kaa" secondAttribute="trailing" constant="20" id="nsq-d9-kg2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="informationView" destination="uBa-1o-kaa" id="QlE-DK-nh7"/>
+                <outlet property="lblDeliveryfee" destination="KfO-ZN-phG" id="moV-2v-xmx"/>
+                <outlet property="lblSubTotal" destination="9FK-H8-h8z" id="mj3-zM-Ld4"/>
+                <outlet property="lblTotal" destination="Ta4-PG-dwW" id="eJm-x7-mWk"/>
+            </connections>
+            <point key="canvasLocation" x="181.8840579710145" y="128.90625"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

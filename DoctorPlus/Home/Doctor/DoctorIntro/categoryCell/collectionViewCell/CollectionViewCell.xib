@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="test2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="243" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="243" height="80"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bjr-aB-YLe">
+                        <rect key="frame" x="0.0" y="0.0" width="243" height="80"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W73-yB-2rH">
+                                <rect key="frame" x="10" y="4" width="223" height="72"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General Doctor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A97-yR-9d7">
+                                        <rect key="frame" x="0.0" y="0.0" width="223" height="72"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
+                                        <color key="textColor" red="0.023529411760000001" green="0.56862745100000001" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.96862745100000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="A97-yR-9d7" secondAttribute="trailing" id="1Dc-dQ-Op6"/>
+                                    <constraint firstItem="A97-yR-9d7" firstAttribute="leading" secondItem="W73-yB-2rH" secondAttribute="leading" id="NIq-kK-rKY"/>
+                                    <constraint firstItem="A97-yR-9d7" firstAttribute="top" secondItem="W73-yB-2rH" secondAttribute="top" id="YxW-vf-yWg"/>
+                                    <constraint firstAttribute="bottom" secondItem="A97-yR-9d7" secondAttribute="bottom" id="h8p-Un-dAY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="W73-yB-2rH" firstAttribute="top" secondItem="Bjr-aB-YLe" secondAttribute="top" constant="4" id="5ib-86-uFD"/>
+                            <constraint firstAttribute="bottom" secondItem="W73-yB-2rH" secondAttribute="bottom" constant="4" id="Fxq-f0-6y8"/>
+                            <constraint firstAttribute="trailing" secondItem="W73-yB-2rH" secondAttribute="trailing" constant="10" id="NRj-nv-14e"/>
+                            <constraint firstItem="W73-yB-2rH" firstAttribute="leading" secondItem="Bjr-aB-YLe" secondAttribute="leading" constant="10" id="Zge-fN-UXH"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Bjr-aB-YLe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6zE-HO-My9"/>
+                <constraint firstItem="Bjr-aB-YLe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Jng-Dc-Ss5"/>
+                <constraint firstAttribute="trailing" secondItem="Bjr-aB-YLe" secondAttribute="trailing" id="gHN-aQ-bRy"/>
+                <constraint firstAttribute="bottom" secondItem="Bjr-aB-YLe" secondAttribute="bottom" id="t9f-89-zMy"/>
+            </constraints>
+            <size key="customSize" width="243" height="80"/>
+            <connections>
+                <outlet property="collectionView" destination="W73-yB-2rH" id="ojH-P8-kEn"/>
+                <outlet property="lblDoctorCategory" destination="A97-yR-9d7" id="7Tk-DB-BUA"/>
+            </connections>
+            <point key="canvasLocation" x="70.28985507246378" y="102.45535714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

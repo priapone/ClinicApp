@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellForDoctorCategory" id="gTV-IL-0wX" customClass="cellForDoctorCategory" customModule="test2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="334" height="114"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="334" height="114"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQA-EJ-hzv">
+                        <rect key="frame" x="0.0" y="0.0" width="334" height="114"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZZ-Qv-zUb">
+                                <rect key="frame" x="10" y="10" width="314" height="94"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General Doctor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdK-LP-bNX">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="94"/>
+                                        <color key="backgroundColor" red="0.87843137250000003" green="0.94901960780000005" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
+                                        <color key="textColor" red="0.023529411760000001" green="0.56862745100000001" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="kdK-LP-bNX" firstAttribute="leading" secondItem="fZZ-Qv-zUb" secondAttribute="leading" id="5jL-gT-IoH"/>
+                                    <constraint firstAttribute="bottom" secondItem="kdK-LP-bNX" secondAttribute="bottom" id="Ffw-5i-ATY"/>
+                                    <constraint firstItem="kdK-LP-bNX" firstAttribute="top" secondItem="fZZ-Qv-zUb" secondAttribute="top" id="HHs-2i-1gL"/>
+                                    <constraint firstAttribute="trailing" secondItem="kdK-LP-bNX" secondAttribute="trailing" id="raR-uk-qNW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fZZ-Qv-zUb" firstAttribute="top" secondItem="mQA-EJ-hzv" secondAttribute="top" constant="10" id="P3y-Ef-Awd"/>
+                            <constraint firstItem="fZZ-Qv-zUb" firstAttribute="leading" secondItem="mQA-EJ-hzv" secondAttribute="leading" constant="10" id="VR1-tI-zJS"/>
+                            <constraint firstAttribute="bottom" secondItem="fZZ-Qv-zUb" secondAttribute="bottom" constant="10" id="i5a-a4-Ez4"/>
+                            <constraint firstAttribute="trailing" secondItem="fZZ-Qv-zUb" secondAttribute="trailing" constant="10" id="yfs-mw-otQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="mQA-EJ-hzv" secondAttribute="bottom" id="5ub-UD-jUD"/>
+                <constraint firstItem="mQA-EJ-hzv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="CBZ-pA-pI3"/>
+                <constraint firstItem="mQA-EJ-hzv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="JvQ-A5-3A0"/>
+                <constraint firstAttribute="trailing" secondItem="mQA-EJ-hzv" secondAttribute="trailing" id="P1G-Bc-Gbg"/>
+            </constraints>
+            <size key="customSize" width="334" height="114"/>
+            <connections>
+                <outlet property="lblNameOfCategory" destination="kdK-LP-bNX" id="ykK-jb-cxW"/>
+                <outlet property="lblView" destination="fZZ-Qv-zUb" id="RlJ-r7-nz4"/>
+            </connections>
+            <point key="canvasLocation" x="233" y="88"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

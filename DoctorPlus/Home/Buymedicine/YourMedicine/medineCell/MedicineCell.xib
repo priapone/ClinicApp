@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Bold.ttf">
+            <string>Poppins-Bold</string>
+        </array>
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MedicineCell" rowHeight="126" id="KGk-i7-Jjw" customClass="MedicineCell" customModule="test2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="132"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="132"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alq-hF-LRD">
+                        <rect key="frame" x="10" y="10" width="355" height="112"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 84" translatesAutoresizingMaskIntoConstraints="NO" id="sLB-fl-s1u">
+                                <rect key="frame" x="8" y="15" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sLB-fl-s1u" secondAttribute="height" multiplier="1:1" id="KtX-y0-np5"/>
+                                    <constraint firstAttribute="height" constant="48" id="hYw-Qt-P1L"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="fds-OH-hnS">
+                                <rect key="frame" x="66" y="5" width="279" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vitamin  B-Complex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pa-bO-guE">
+                                        <rect key="frame" x="0.0" y="0.0" width="279" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 tablate in strip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAe-nA-4ge">
+                                        <rect key="frame" x="0.0" y="22.5" width="279" height="20"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$11.50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dP-Nf-See">
+                                        <rect key="frame" x="0.0" y="42.5" width="279" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
+                                        <color key="textColor" red="0.023529411760000001" green="0.56862745100000001" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBm-lf-0xH">
+                                <rect key="frame" x="66" y="70" width="279" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Remove">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eBm-lf-0xH" firstAttribute="top" secondItem="fds-OH-hnS" secondAttribute="bottom" id="3EW-52-KwH"/>
+                            <constraint firstItem="eBm-lf-0xH" firstAttribute="leading" secondItem="fds-OH-hnS" secondAttribute="leading" id="3Es-bd-U3v"/>
+                            <constraint firstAttribute="bottom" secondItem="eBm-lf-0xH" secondAttribute="bottom" constant="8" id="3yh-Zj-NLQ"/>
+                            <constraint firstItem="fds-OH-hnS" firstAttribute="leading" secondItem="sLB-fl-s1u" secondAttribute="trailing" constant="10" id="89d-gY-f1Q"/>
+                            <constraint firstItem="sLB-fl-s1u" firstAttribute="top" secondItem="alq-hF-LRD" secondAttribute="top" constant="15" id="GQ1-l1-JZ3"/>
+                            <constraint firstAttribute="trailing" secondItem="eBm-lf-0xH" secondAttribute="trailing" constant="10" id="GhZ-Sr-obU"/>
+                            <constraint firstItem="sLB-fl-s1u" firstAttribute="leading" secondItem="alq-hF-LRD" secondAttribute="leading" constant="8" id="M7F-wo-Auo"/>
+                            <constraint firstAttribute="trailing" secondItem="fds-OH-hnS" secondAttribute="trailing" constant="10" id="TBB-tB-ko7"/>
+                            <constraint firstItem="fds-OH-hnS" firstAttribute="top" secondItem="alq-hF-LRD" secondAttribute="top" constant="5" id="yOZ-Sz-JVb"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="alq-hF-LRD" secondAttribute="bottom" constant="10" id="Z0R-pp-ocN"/>
+                    <constraint firstItem="alq-hF-LRD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="fgh-OS-oB6"/>
+                    <constraint firstItem="alq-hF-LRD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="mpJ-TU-K8W"/>
+                    <constraint firstAttribute="trailing" secondItem="alq-hF-LRD" secondAttribute="trailing" constant="10" id="vLm-p3-kwY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cartView" destination="alq-hF-LRD" id="ozQ-aT-RT6"/>
+                <outlet property="imageProduct" destination="sLB-fl-s1u" id="XGV-0e-jsP"/>
+                <outlet property="lblDescription" destination="SAe-nA-4ge" id="tAQ-bz-wG0"/>
+                <outlet property="lblNameOfMedicine" destination="1Pa-bO-guE" id="he6-4H-xT4"/>
+                <outlet property="lblPrice" destination="6dP-Nf-See" id="kzQ-N3-wm4"/>
+                <outlet property="removeBtn" destination="eBm-lf-0xH" id="fEJ-jA-9oF"/>
+            </connections>
+            <point key="canvasLocation" x="245.6521739130435" y="83.035714285714278"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Rectangle 84" width="48" height="48"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddressCell" rowHeight="84" id="KGk-i7-Jjw" customClass="AddressCell" customModule="test2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="405" height="86"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="405" height="86"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xTh-9F-Ld2">
+                        <rect key="frame" x="20" y="5" width="365" height="60"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 128" highlightedImage="Group 127" translatesAutoresizingMaskIntoConstraints="NO" id="QL0-nI-cu1">
+                                <rect key="frame" x="15" y="10" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QL0-nI-cu1" secondAttribute="height" multiplier="1:1" id="Ci1-gY-eWt"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="fXN-zi-HV4">
+                                <rect key="frame" x="65" y="8.5" width="159" height="43.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ue-X9-36h">
+                                        <rect key="frame" x="0.0" y="0.0" width="48" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brooklyan, New York,US" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IkL-HL-GSv">
+                                        <rect key="frame" x="0.0" y="23.5" width="159" height="20"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cg6-uh-SDM">
+                                <rect key="frame" x="325" y="17.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="8cZ-fU-zO0"/>
+                                    <constraint firstAttribute="width" constant="25" id="Ztf-xt-6vb"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="ci_edit"/>
+                                <connections>
+                                    <action selector="editBtnAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="D0p-P7-Z6n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QL0-nI-cu1" firstAttribute="centerY" secondItem="xTh-9F-Ld2" secondAttribute="centerY" id="HrL-GM-LHc"/>
+                            <constraint firstItem="QL0-nI-cu1" firstAttribute="leading" secondItem="xTh-9F-Ld2" secondAttribute="leading" constant="15" id="LQ0-pf-T12"/>
+                            <constraint firstItem="cg6-uh-SDM" firstAttribute="centerY" secondItem="xTh-9F-Ld2" secondAttribute="centerY" id="LnE-eK-QVT"/>
+                            <constraint firstItem="fXN-zi-HV4" firstAttribute="centerY" secondItem="xTh-9F-Ld2" secondAttribute="centerY" id="Plz-Tr-WZQ"/>
+                            <constraint firstAttribute="height" constant="60" id="Q4f-5Q-T4z"/>
+                            <constraint firstItem="fXN-zi-HV4" firstAttribute="leading" secondItem="QL0-nI-cu1" secondAttribute="trailing" constant="10" id="SJV-qP-tFU"/>
+                            <constraint firstAttribute="trailing" secondItem="cg6-uh-SDM" secondAttribute="trailing" constant="15" id="p1I-rF-Hod"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="xTh-9F-Ld2" secondAttribute="trailing" constant="20" id="2XE-Ug-bYR"/>
+                    <constraint firstItem="xTh-9F-Ld2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Oaj-o8-rmd"/>
+                    <constraint firstItem="xTh-9F-Ld2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="ajC-Dc-yvM"/>
+                    <constraint firstAttribute="bottom" secondItem="xTh-9F-Ld2" secondAttribute="bottom" constant="10" id="h7H-0I-Pnj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addressView" destination="xTh-9F-Ld2" id="1dQ-Ke-9Rf"/>
+                <outlet property="imageSelect" destination="QL0-nI-cu1" id="s2o-ue-ZIs"/>
+                <outlet property="lblArea" destination="IkL-HL-GSv" id="AGk-hv-hbC"/>
+                <outlet property="lblHome" destination="9Ue-X9-36h" id="ZjG-n3-uP8"/>
+            </connections>
+            <point key="canvasLocation" x="199.27536231884059" y="117.1875"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Group 127" width="40" height="40"/>
+        <image name="Group 128" width="40" height="40"/>
+        <image name="ci_edit" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
