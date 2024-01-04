@@ -8,16 +8,29 @@
 import UIKit
 import IQKeyboardManagerSwift
 import Firebase
+import FirebaseCore
+import FirebaseAuth
+import FirebaseFirestore
+import FirebaseStorage
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    
+    var doctor: DoctorModel = DoctorModel(name: "")
+    var doctors = [DoctorModel(name: "")]
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         Thread.sleep(forTimeInterval: 2.0)
         FirebaseApp.configure()
         
+        // Load doctors' data
+        
+        Task {
+            await doAsyncWork()
+        }
         IQKeyboardManager.shared.enable = true
         return true
     }
@@ -35,7 +48,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+    
+    func doAsyncWork() async {
+        print("Doing async work")
+        let db = Firestore.firestore()
+        doctors.removeAll()
+        do {
+          let querySnapshot = try await db.collection("DoctorData").getDocuments()
+          for document in querySnapshot.documents {
+              do {
+                  self.doctor = try document.data(as: DoctorModel.self)
+                  doctors.append(self.doctor)
+                  print("\(doctors)")
+              }
+              catch {
+                  print(error)
+              }
+              
+          }
+        } catch {
+          print("Error getting documents: \(error)")
+        }
+        
+    }
 
+
+    
 
 }
 

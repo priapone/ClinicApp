@@ -172,6 +172,9 @@
 		F6065A7B2B4207CF00182CE0 /* LocationViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6065A7D2B4207CF00182CE0 /* LocationViewCell.xib */; };
 		F6065A862B42228600182CE0 /* ClinicViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6065A842B42228600182CE0 /* ClinicViewCell.swift */; };
 		F6065A872B42228600182CE0 /* ClinicViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6065A852B42228600182CE0 /* ClinicViewCell.xib */; };
+		F65B9BAE2B457E010061028A /* DoctorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65B9BAD2B457E010061028A /* DoctorModel.swift */; };
+		F65B9BB12B47098A0061028A /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = F65B9BB02B47098A0061028A /* SDWebImage */; };
+		F65B9BB32B47098A0061028A /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F65B9BB22B47098A0061028A /* SDWebImageMapKit */; };
 		F67585302B3F247500E48DA3 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675852F2B3F247500E48DA3 /* Alert.swift */; };
 		F675853A2B40577B00E48DA3 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67585382B40577B00E48DA3 /* SignupVC.swift */; };
 		F675853B2B40577B00E48DA3 /* SignupVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F67585392B40577B00E48DA3 /* SignupVC.xib */; };
@@ -351,6 +354,7 @@
 		F6065A7E2B4207CF00182CE0 /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/LocationViewCell.xcstrings; sourceTree = "<group>"; };
 		F6065A842B42228600182CE0 /* ClinicViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicViewCell.swift; sourceTree = "<group>"; };
 		F6065A852B42228600182CE0 /* ClinicViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClinicViewCell.xib; sourceTree = "<group>"; };
+		F65B9BAD2B457E010061028A /* DoctorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorModel.swift; sourceTree = "<group>"; };
 		F675852F2B3F247500E48DA3 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		F67585382B40577B00E48DA3 /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		F67585392B40577B00E48DA3 /* SignupVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignupVC.xib; sourceTree = "<group>"; };
@@ -364,6 +368,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F65B9BB12B47098A0061028A /* SDWebImage in Frameworks */,
+				F65B9BB32B47098A0061028A /* SDWebImageMapKit in Frameworks */,
 				E14787ED259AB4FA51BDA4C1 /* Pods_DoctorPlus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1152,6 +1158,7 @@
 			isa = PBXGroup;
 			children = (
 				ECCE44482891041A00C73D58 /* Model.swift */,
+				F65B9BAD2B457E010061028A /* DoctorModel.swift */,
 			);
 			path = BasicStuff;
 			sourceTree = "<group>";
@@ -1210,6 +1217,10 @@
 			dependencies = (
 			);
 			name = DoctorPlus;
+			packageProductDependencies = (
+				F65B9BB02B47098A0061028A /* SDWebImage */,
+				F65B9BB22B47098A0061028A /* SDWebImageMapKit */,
+			);
 			productName = test2;
 			productReference = EC189624287D82A900D7A0FF /* DoctorPlus.app */;
 			productType = "com.apple.product-type.application";
@@ -1238,6 +1249,9 @@
 				Base,
 			);
 			mainGroup = EC18961B287D82A900D7A0FF;
+			packageReferences = (
+				F65B9BAF2B47098A0061028A /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = EC189625287D82A900D7A0FF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1461,6 +1475,7 @@
 				EC5C8662289A4AD500A50E87 /* SettingVC.swift in Sources */,
 				EC677D642885634500EF3D1B /* HomeVC.swift in Sources */,
 				EC5C867B289A573100A50E87 /* ChangePasswordVC.swift in Sources */,
+				F65B9BAE2B457E010061028A /* DoctorModel.swift in Sources */,
 				EC23D404287EC7F50013D91D /* OtpVC.swift in Sources */,
 				F67585422B40587900E48DA3 /* OKSignupVC.swift in Sources */,
 				EC5DC74928979CA700265F97 /* TimePickerCell.swift in Sources */,
@@ -1714,6 +1729,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F65B9BAF2B47098A0061028A /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.18.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F65B9BB02B47098A0061028A /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F65B9BAF2B47098A0061028A /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		F65B9BB22B47098A0061028A /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F65B9BAF2B47098A0061028A /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EC18961C287D82A900D7A0FF /* Project object */;
 }

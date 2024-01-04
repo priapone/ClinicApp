@@ -34,7 +34,7 @@ class DoctorVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         fullString.append(image1String)
         fullString.append(NSAttributedString(string: "  Doctor"))
         self.navigationview.TitleLebal.attributedText = fullString
-        navigationview.TitleLebal.textColor =  .Mycolor()
+        navigationview.TitleLebal.textColor = .Mycolor()
         navigationview.onTapBackAction = {
             self.navigationController?.popViewController(animated: true)
         }

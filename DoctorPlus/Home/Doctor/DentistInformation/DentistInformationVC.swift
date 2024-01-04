@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import SDWebImage
+import FirebaseStorage
+import FirebaseStorageUI
 
 class DentistInformationVC: UIViewController {
 
@@ -18,6 +21,8 @@ class DentistInformationVC: UIViewController {
     @IBOutlet var ratingViwe: UIView!
     @IBOutlet var experienceView: UIView!
     
+    let urlImage = "gs://ambulatorio-spinea.appspot.com"
+
 //    var txtDoctorName: String = ""
 //    var txtSpecialist: String = ""
 //    var txtCV: String = ""
@@ -27,6 +32,7 @@ class DentistInformationVC: UIViewController {
     
     init(doctor: DoctorDetail) {
         super.init(nibName: nil, bundle: Bundle.main)
+        
         self.doctor = doctor
 //        self.txtDoctorName = doctor.name
 //        self.txtSpecialist = doctor.specialist
@@ -40,11 +46,16 @@ class DentistInformationVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let storage = Storage.storage()
+        //let storageRef = storage.reference()
+        let gsReference = storage.reference(forURL: "\(urlImage)/Doctor1.png")
         
         labelDoctorName.text = "\(doctor.name) \(doctor.surname)"
         labelSpecialist.text = doctor.specialist
         labelCV.text = doctor.cv
-        imageView.image = doctor.image
+        //imageView.image = doctor.image
+        let placeholderImage = UIImage(named: "placeholder.jpg")
+        imageView.sd_setImage(with: gsReference, placeholderImage: placeholderImage)
         patienView.addShadow()
         ratingViwe.addShadow()
         experienceView.addShadow()

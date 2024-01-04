@@ -11,4 +11,7 @@ target 'DoctorPlus' do
   pod 'DropDown'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
+  pod 'FirebaseStorageUI'
+  
 end
