@@ -47,7 +47,6 @@ class DentistInformationVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let storage = Storage.storage()
-        //let storageRef = storage.reference()
         let gsReference = storage.reference(forURL: "\(urlImage)/Doctor1.png")
         
         labelDoctorName.text = "\(doctor.name) \(doctor.surname)"

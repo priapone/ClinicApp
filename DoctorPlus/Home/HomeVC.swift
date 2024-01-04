@@ -9,6 +9,10 @@ import UIKit
 import FSPagerView
 import Firebase
 import CoreLocation
+import FirebaseCore
+import FirebaseAuth
+import FirebaseFirestore
+import FirebaseStorage
 
 class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,FSPagerViewDelegate,FSPagerViewDataSource{
     
@@ -33,17 +37,24 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     }
     
     let db = Firestore.firestore()
+    var doctor: DoctorModel = DoctorModel(name: "")
+    let uiItemOfImage = UIImageView()
+    let urlImage = "gs://ambulatorio-spinea.appspot.com"
+    let placeholderImage = UIImage(named: "placeholder.jpg")
     var Itemimage = ["Group","Stethoscope","Regime","Ambulance_2"]
     var Itemlabel = ["Buy Medicine","Doctor","Set Reminder","Emergency"]
     var itemColor = ["EDF0F7","E8EDEE","FDEFEF","F7EDF1"]
     var pageviewimage = ["FsImage","67","68"]
     let locationManager = CLLocationManager()
+    var doctors = [DoctorModelWithImage(dm: DoctorModel(name: ""), doctorImage: UIImage(named: "placeholder.jpg")!)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         mapView.addShadow()
-        
+        Task {
+            await doAsyncWork()
+        }
         if let user = Auth.auth().currentUser {
             let uid = user.uid
             loadDisplayName(uid, label: labelName)
@@ -177,6 +188,32 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
 
             completionHandler(placeMarks?.first?.locality)
          })
+    }
+    
+    func doAsyncWork() async {
+        print("Doing async work")
+        let db = Firestore.firestore()
+        let storage = Storage.storage()
+        doctors.removeAll()
+        do {
+          let querySnapshot = try await db.collection("DoctorData").getDocuments()
+          for document in querySnapshot.documents {
+              do {
+                  self.doctor = try document.data(as: DoctorModel.self)
+                  let gsReference = storage.reference(forURL: "\(urlImage)/Doctor1.png")
+                  try await uiItemOfImage.sd_setImage(with: gsReference, placeholderImage: placeholderImage)
+                  doctors.append(DoctorModelWithImage(dm: self.doctor, doctorImage: uiItemOfImage.image!))
+                  print("\(doctors)")
+              }
+              catch {
+                  print(error)
+              }
+              
+          }
+        } catch {
+          print("Error getting documents: \(error)")
+        }
+        
     }
 }
 

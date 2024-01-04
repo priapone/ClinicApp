@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import FirebaseStorage
+import FirebaseStorageUI
 import FirebaseFirestore
 
 struct DoctorModel: Codable {
@@ -37,4 +39,15 @@ struct DoctorModel: Codable {
         self.EveningSlot = eveningSlot
     }
     
+}
+
+struct DoctorModelWithImage {
+    
+    var dm: DoctorModel
+    var doctorImage: UIImage
+    
+    init(dm: DoctorModel, doctorImage: UIImage) {
+        self.dm = dm
+        self.doctorImage = doctorImage
+    }
 }

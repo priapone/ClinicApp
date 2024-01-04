@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseStorage
+import FirebaseStorageUI
 
 class DoctorVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
@@ -19,6 +21,8 @@ class DoctorVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         }
     }
     var Doctor : [DoctorDetail] = []
+    let urlImage = "gs://ambulatorio-spinea.appspot.com"
+    var doctors: [DoctorModelWithImage] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +70,10 @@ class DoctorVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let storage = Storage.storage()
+        let placeholderImage = UIImage(named: "placeholder.jpg")
+        let uiItemOfImage = UIImageView()
+        
         if indexPath.section == 0{
             let drCategoryCell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath) as! categoryCell
             return drCategoryCell
@@ -74,8 +82,11 @@ class DoctorVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             let doctorCell = tableView.dequeueReusableCell(withIdentifier: "DoctorLeftCell", for: indexPath) as! DoctorLeftCell
             let rightcell = tableView.dequeueReusableCell(withIdentifier: "DoctorRightCell", for: indexPath) as! DoctorRightCell
             
+            let gsReference = storage.reference(forURL: "\(urlImage)/Doctor1.png")
             
-            let itemOfImage = Doctor[indexPath.row]
+            var itemOfImage = Doctor[indexPath.row]
+            uiItemOfImage.sd_setImage(with: gsReference, placeholderImage: placeholderImage)
+            itemOfImage.image = uiItemOfImage.image!
             
             if indexPath.row % 2 == 0{
                 doctorCell.imageDoctor.image  =  itemOfImage.image
