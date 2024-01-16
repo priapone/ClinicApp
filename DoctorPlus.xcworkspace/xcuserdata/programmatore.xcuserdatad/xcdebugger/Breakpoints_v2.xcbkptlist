@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B346ABBD-BFE0-4F4F-A8DE-6A298BFFE964"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "54BED717-B498-4FE2-ADC8-5B5042571403"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoctorPlus/Home/Reminder/AddPills/AddPillsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
+            landmarkName = "buttonAddPills(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "54BED717-B498-4FE2-ADC8-5B5042571403 - e64aa2bd01e60890"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DoctorPlus.AddPillsVC.buttonAddPills(__C.UIButton) -&gt; ()"
+                  moduleName = "DoctorPlus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/programmatore/Documents/Swift/DoctorAppointmentApp/DoctorPlus/DoctorPlus/Home/Reminder/AddPills/AddPillsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "174"
+                  endingLineNumber = "174"
+                  offsetFromSymbolStart = "356">
+               </Location>
+               <Location
+                  uuid = "54BED717-B498-4FE2-ADC8-5B5042571403 - d0eac41928e5b9a3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in DoctorPlus.AddPillsVC.buttonAddPills(__C.UIButton) -&gt; ()"
+                  moduleName = "DoctorPlus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/programmatore/Documents/Swift/DoctorAppointmentApp/DoctorPlus/DoctorPlus/Home/Reminder/AddPills/AddPillsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "174"
+                  endingLineNumber = "174"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "54BED717-B498-4FE2-ADC8-5B5042571403 - e64aa2bd01e608b3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DoctorPlus.AddPillsVC.buttonAddPills(__C.UIButton) -&gt; ()"
+                  moduleName = "DoctorPlus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/programmatore/Documents/Swift/DoctorAppointmentApp/DoctorPlus/DoctorPlus/Home/Reminder/AddPills/AddPillsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "175"
+                  endingLineNumber = "175"
+                  offsetFromSymbolStart = "1220">
+               </Location>
+               <Location
+                  uuid = "54BED717-B498-4FE2-ADC8-5B5042571403 - e64aa2bd01e60814"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DoctorPlus.AddPillsVC.buttonAddPills(__C.UIButton) -&gt; ()"
+                  moduleName = "DoctorPlus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/programmatore/Documents/Swift/DoctorAppointmentApp/DoctorPlus/DoctorPlus/Home/Reminder/AddPills/AddPillsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "178"
+                  endingLineNumber = "178"
+                  offsetFromSymbolStart = "1220">
+               </Location>
+               <Location
+                  uuid = "54BED717-B498-4FE2-ADC8-5B5042571403 - e64aa2bd01e60837"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DoctorPlus.AddPillsVC.buttonAddPills(__C.UIButton) -&gt; ()"
+                  moduleName = "DoctorPlus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/programmatore/Documents/Swift/DoctorAppointmentApp/DoctorPlus/DoctorPlus/Home/Reminder/AddPills/AddPillsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "179"
+                  endingLineNumber = "179"
+                  offsetFromSymbolStart = "1220">
+               </Location>
+               <Location
+                  uuid = "54BED717-B498-4FE2-ADC8-5B5042571403 - e64aa2bd01e60837"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DoctorPlus.AddPillsVC.buttonAddPills(__C.UIButton) -&gt; ()"
+                  moduleName = "DoctorPlus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/programmatore/Documents/Swift/DoctorAppointmentApp/DoctorPlus/DoctorPlus/Home/Reminder/AddPills/AddPillsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "179"
+                  endingLineNumber = "179"
+                  offsetFromSymbolStart = "1716">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

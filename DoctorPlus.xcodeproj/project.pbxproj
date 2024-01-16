@@ -175,6 +175,7 @@
 		F65B9BAE2B457E010061028A /* DoctorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65B9BAD2B457E010061028A /* DoctorModel.swift */; };
 		F65B9BB12B47098A0061028A /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = F65B9BB02B47098A0061028A /* SDWebImage */; };
 		F65B9BB32B47098A0061028A /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F65B9BB22B47098A0061028A /* SDWebImageMapKit */; };
+		F65B9BB52B4855EE0061028A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65B9BB42B4855EE0061028A /* UserModel.swift */; };
 		F67585302B3F247500E48DA3 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F675852F2B3F247500E48DA3 /* Alert.swift */; };
 		F675853A2B40577B00E48DA3 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67585382B40577B00E48DA3 /* SignupVC.swift */; };
 		F675853B2B40577B00E48DA3 /* SignupVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F67585392B40577B00E48DA3 /* SignupVC.xib */; };
@@ -355,6 +356,8 @@
 		F6065A842B42228600182CE0 /* ClinicViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicViewCell.swift; sourceTree = "<group>"; };
 		F6065A852B42228600182CE0 /* ClinicViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClinicViewCell.xib; sourceTree = "<group>"; };
 		F65B9BAD2B457E010061028A /* DoctorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorModel.swift; sourceTree = "<group>"; };
+		F65B9BB42B4855EE0061028A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		F65B9BB62B4B2C340061028A /* DoctorPlus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DoctorPlus.entitlements; sourceTree = "<group>"; };
 		F675852F2B3F247500E48DA3 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		F67585382B40577B00E48DA3 /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		F67585392B40577B00E48DA3 /* SignupVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignupVC.xib; sourceTree = "<group>"; };
@@ -495,6 +498,7 @@
 		EC189626287D82A900D7A0FF /* DoctorPlus */ = {
 			isa = PBXGroup;
 			children = (
+				F65B9BB62B4B2C340061028A /* DoctorPlus.entitlements */,
 				EC189627287D82A900D7A0FF /* AppDelegate.swift */,
 				EC189629287D82A900D7A0FF /* SceneDelegate.swift */,
 				EC18963B287D87F900D7A0FF /* BasicStuff.swift */,
@@ -1159,6 +1163,7 @@
 			children = (
 				ECCE44482891041A00C73D58 /* Model.swift */,
 				F65B9BAD2B457E010061028A /* DoctorModel.swift */,
+				F65B9BB42B4855EE0061028A /* UserModel.swift */,
 			);
 			path = BasicStuff;
 			sourceTree = "<group>";
@@ -1425,6 +1430,7 @@
 				EC3568BB2887F40400F58E70 /* Navigationbar.swift in Sources */,
 				EC677D6628856DD600EF3D1B /* Homecell.swift in Sources */,
 				EC35302D2897E9A700B2C1FF /* AddPillsVC.swift in Sources */,
+				F65B9BB52B4855EE0061028A /* UserModel.swift in Sources */,
 				EC38F4A8289929150084B946 /* NotificationCell.swift in Sources */,
 				EC12C59C289A78D4004F1771 /* ImageLeftCell.swift in Sources */,
 				EC5DC74E28979D4600265F97 /* TimeCollectionViewCell.swift in Sources */,
@@ -1651,6 +1657,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DoctorPlus/DoctorPlus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WP3C8GS5NJ;
@@ -1684,6 +1691,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DoctorPlus/DoctorPlus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WP3C8GS5NJ;

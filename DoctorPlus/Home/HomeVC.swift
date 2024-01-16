@@ -14,7 +14,7 @@ import FirebaseAuth
 import FirebaseFirestore
 import FirebaseStorage
 
-class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,FSPagerViewDelegate,FSPagerViewDataSource{
+class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,FSPagerViewDelegate,FSPagerViewDataSource, UNUserNotificationCenterDelegate {
     
 
     @IBOutlet weak var labelPosition: UILabel!
@@ -36,28 +36,30 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
         }
     }
     
-    let db = Firestore.firestore()
-    var doctor: DoctorModel = DoctorModel(name: "")
-    let uiItemOfImage = UIImageView()
-    let urlImage = "gs://ambulatorio-spinea.appspot.com"
-    let placeholderImage = UIImage(named: "placeholder.jpg")
     var Itemimage = ["Group","Stethoscope","Regime","Ambulance_2"]
     var Itemlabel = ["Buy Medicine","Doctor","Set Reminder","Emergency"]
     var itemColor = ["EDF0F7","E8EDEE","FDEFEF","F7EDF1"]
     var pageviewimage = ["FsImage","67","68"]
     let locationManager = CLLocationManager()
     var doctors = [DoctorModelWithImage(dm: DoctorModel(name: ""), doctorImage: UIImage(named: "placeholder.jpg")!)]
+    var users = [UserModel(displayName: "")]
+    var medicines = [Medicine()]
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         mapView.addShadow()
-        Task {
-            await doAsyncWork()
-        }
+
         if let user = Auth.auth().currentUser {
             let uid = user.uid
             loadDisplayName(uid, label: labelName)
+            Task {
+                await doAsyncWork(userEmail: user.email!)
+            }
         }
         locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
@@ -80,6 +82,9 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
         pageControlView.currentPage = 0
         pageControlView.setFillColor(.systemGray6, for: .normal)
         pageControlView.setFillColor(.Mycolor(), for: .selected)
+
+        
+
     }
     
     //MARK: - pagerview datasource
@@ -152,32 +157,40 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
         }
         else if indexPath.row == 1{
             let vc = DoctorVC()
+            vc.doctors = self.doctors
             self.navigationController?.pushViewController(vc, animated: true)
         }
         else if indexPath.row == 2{
             let vc = ReminderVC()
+            // Update data about medicine
+            vc.medicines.removeAll()
+            vc.medicines = medicines
             self.navigationController?.pushViewController(vc, animated: true)
         }
         else{
             let vc = EmergencyVC()
             self.navigationController?.pushViewController(vc, animated: true)
         }
-        
     }
     
     
     //MARK: - serchbtn click
 
+    @available(iOS 16.0, *)
     @IBAction func serchBtn(_ sender: UIButton) {
-    let vc = SerchVC()
+        let vc = SerchVC()
         vc.getNavigationTitle = "Search"
-    self.navigationController?.pushViewController(vc, animated: true)
+        self.navigationController?.pushViewController(vc, animated: true)
     
     }
+    
+
     @IBAction func mapBtnAction(_ sender: UIButton) {
         let vc = LocationVC()
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+
     
     func retrieveCityName(latitude: Double, longitude: Double, completionHandler: @escaping (String?) -> Void)
     {
@@ -190,19 +203,29 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
          })
     }
     
-    func doAsyncWork() async {
+
+    
+    
+    func doAsyncWork(userEmail: String) async {
         print("Doing async work")
+        let uiItemOfImage = UIImageView()
+        let urlImage = "gs://ambulatorio-spinea.appspot.com"
+        let placeholderImage = UIImage(named: "placeholder.jpg")
+        var doctor: DoctorModel
+        var user: UserModel = UserModel(displayName: "")
+        var medicine: Medicine
         let db = Firestore.firestore()
         let storage = Storage.storage()
         doctors.removeAll()
         do {
-          let querySnapshot = try await db.collection("DoctorData").getDocuments()
-          for document in querySnapshot.documents {
+            let querySnapshot = try await db.collection("DoctorData").getDocuments()
+            for document in querySnapshot.documents {
               do {
-                  self.doctor = try document.data(as: DoctorModel.self)
-                  let gsReference = storage.reference(forURL: "\(urlImage)/Doctor1.png")
+                  // self.doctor is DoctorModel type, so it has an Image field
+                  doctor = try document.data(as: DoctorModel.self)
+                  let gsReference = storage.reference(forURL: "\(urlImage)/\(doctor.Image)")
                   try await uiItemOfImage.sd_setImage(with: gsReference, placeholderImage: placeholderImage)
-                  doctors.append(DoctorModelWithImage(dm: self.doctor, doctorImage: uiItemOfImage.image!))
+                  doctors.append(DoctorModelWithImage(dm: doctor, doctorImage: uiItemOfImage.image!))
                   print("\(doctors)")
               }
               catch {
@@ -213,6 +236,42 @@ class HomeVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
         } catch {
           print("Error getting documents: \(error)")
         }
+        users.removeAll()
+        do {
+          let querySnapshot = try await db.collection("UserData").whereField("email", isEqualTo: userEmail)
+            .getDocuments()
+          for document in querySnapshot.documents {
+            print("HomeVC User: \(document.documentID) => \(document.data())")
+            do {
+                user = try document.data(as: UserModel.self)
+                users.append(user)
+              }
+          }
+            print ("Users: \(users)")
+        } catch {
+          print("Error getting documents: \(error)")
+        }
+        medicines.removeAll()
+        do {
+            let querySnapshot = try await db.collection("UserData/\(String(describing: user.ID!))/MedicineData").getDocuments()
+          let actualDate = Date()
+          for document in querySnapshot.documents {
+            print("HomeVC Medicine: \(document.documentID) => \(document.data())")
+            do {
+                medicine = try document.data(as: Medicine.self)
+                if actualDate > medicine.start && actualDate < medicine.end {
+                    print("Insert \(medicine.name)")
+                    medicines.append(medicine)
+                }
+                
+              }
+          }
+            print ("Medicine: \(medicines)")
+        } catch {
+          print("Error getting documents: \(error)")
+        }
+        
+        
         
     }
 }

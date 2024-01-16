@@ -21,7 +21,7 @@ class DoctorVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         }
     }
     var Doctor : [DoctorDetail] = []
-    let urlImage = "gs://ambulatorio-spinea.appspot.com"
+   
     var doctors: [DoctorModelWithImage] = []
     
     override func viewDidLoad() {
@@ -64,7 +64,8 @@ class DoctorVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             return 1
         }
         else{
-            return Doctor.count
+            //return Doctor.count
+            return doctors.count
         }
     }
     
@@ -81,23 +82,38 @@ class DoctorVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         else{
             let doctorCell = tableView.dequeueReusableCell(withIdentifier: "DoctorLeftCell", for: indexPath) as! DoctorLeftCell
             let rightcell = tableView.dequeueReusableCell(withIdentifier: "DoctorRightCell", for: indexPath) as! DoctorRightCell
+
+            //var itemOfImage = Doctor[indexPath.row]
+            var doctor = doctors[indexPath.row]
+            var item = doctor.dm
+            var image = doctor.doctorImage
+            var name = item.Name
+            var surname = item.Surname
+            var specialist = item.Specialist
             
-            let gsReference = storage.reference(forURL: "\(urlImage)/Doctor1.png")
+//            if indexPath.row % 2 == 0 {
+//                doctorCell.imageDoctor.image  =  itemOfImage.image
+//                doctorCell.lblNameDoctor.text = "\(itemOfImage.name) \(itemOfImage.surname)"
+//                doctorCell.lblSpecialist.text = "\(itemOfImage.specialist)"
+//                return doctorCell
+//            }
+//            else{
+//                rightcell.lblDoctorName.text = "\(itemOfImage.name) \(itemOfImage.surname)"
+//                rightcell.imageOfDoctor.image = itemOfImage.image
+//                rightcell.lblSpecilist.text = "\(itemOfImage.specialist)"
+//                return rightcell
+//            }
             
-            var itemOfImage = Doctor[indexPath.row]
-            uiItemOfImage.sd_setImage(with: gsReference, placeholderImage: placeholderImage)
-            itemOfImage.image = uiItemOfImage.image!
-            
-            if indexPath.row % 2 == 0{
-                doctorCell.imageDoctor.image  =  itemOfImage.image
-                doctorCell.lblNameDoctor.text = "\(itemOfImage.name) \(itemOfImage.surname)"
-                doctorCell.lblSpecialist.text = "\(itemOfImage.specialist)"
+            if indexPath.row % 2 == 0 {
+                doctorCell.imageDoctor.image  =  image
+                doctorCell.lblNameDoctor.text = "\(name) \(surname)"
+                doctorCell.lblSpecialist.text = "\(specialist)"
                 return doctorCell
             }
             else{
-                rightcell.lblDoctorName.text = "\(itemOfImage.name) \(itemOfImage.surname)"
-                rightcell.imageOfDoctor.image = itemOfImage.image
-                rightcell.lblSpecilist.text = "\(itemOfImage.specialist)"
+                rightcell.lblDoctorName.text = "\(name) \(surname)"
+                rightcell.imageOfDoctor.image = image
+                rightcell.lblSpecilist.text = "\(specialist)"
                 return rightcell
             }
         }

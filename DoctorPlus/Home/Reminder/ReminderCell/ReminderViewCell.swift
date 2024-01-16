@@ -14,7 +14,7 @@ class ReminderViewCell: UITableViewCell {
     @IBOutlet var ImageForMedicine: UIImageView!
     @IBOutlet var myView: UIView!
     @IBOutlet var vectorBtn: UIButton!
-    
+    @IBOutlet weak var lblQuantity: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
